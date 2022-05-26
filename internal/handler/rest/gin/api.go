@@ -5,11 +5,11 @@ import (
 )
 
 type CourierHandler interface {
-	CreateRestaurant(*gin.Context)
-	GetRestaurants(*gin.Context)
-	GetRestaurant(*gin.Context)
-	UpdateRestaurant(*gin.Context)
-	DeleteRestaurant(*gin.Context)
+	PostsItem(*gin.Context)
+	GetItems(*gin.Context)
+	GetItem(*gin.Context)
+	UpdateItem(*gin.Context)
+	DeleteItem(*gin.Context)
 }
 
 type handler struct {
