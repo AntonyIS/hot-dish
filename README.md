@@ -8,4 +8,4 @@ This application puts emphasis on the hexagonal architecture. The technology sta
 * Postgres
 * Gin
 * Docker
-![Alt text](https://github.com/AntonyIS/go-grpc-crud/blob/main/docs/images/design.jpg "Hexagonal Architecture")
+![Alt text](https://github.com/AntonyIS/go-foods/blob/main/docs/images/design.jpg "Hexagonal Architecture")
