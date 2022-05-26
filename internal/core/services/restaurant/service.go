@@ -31,6 +31,6 @@ func (cs restaurantService) UpdateRestaurant(restaurant *domain.Restaurant) (*do
 	return cs.repo.UpdateRestaurant(restaurant)
 }
 
-func (cs restaurantService) DeleteRestaurant(id string) (*domain.Restaurant, error) {
+func (cs restaurantService) DeleteRestaurant(id string) error {
 	return cs.repo.DeleteRestaurant(id)
 }

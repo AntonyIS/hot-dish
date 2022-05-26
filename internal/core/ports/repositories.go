@@ -7,7 +7,7 @@ type RestaurantRepository interface {
 	GetRestaurants() (*[]domain.Restaurant, error)
 	GetRestaurant(id string) (*domain.Restaurant, error)
 	UpdateRestaurant(restaurant *domain.Restaurant) (*domain.Restaurant, error)
-	DeleteRestaurant(id string) (*domain.Restaurant, error)
+	DeleteRestaurant(id string) error
 }
 
 type CustomerRepository interface {
@@ -15,7 +15,7 @@ type CustomerRepository interface {
 	GetCustomers() (*[]domain.Customer, error)
 	GetCustomer(id string) (*domain.Customer, error)
 	UpdateCustomer(customer *domain.Customer) (*domain.Customer, error)
-	DeleteCustomer(id string) (*domain.Customer, error)
+	DeleteCustomer(id string) error
 }
 
 type CourierRepository interface {
@@ -23,5 +23,11 @@ type CourierRepository interface {
 	GetCouriers() (*[]domain.Courier, error)
 	GetCourier(id string) (*domain.Courier, error)
 	UpdateCourier(courier *domain.Courier) (*domain.Courier, error)
-	DeleteCourier(id string) (*domain.Courier, error)
+	DeleteCourier(id string) error
+}
+
+type ItemRepository interface {
+	CourierRepository
+	CustomerRepository
+	RestaurantRepository
 }

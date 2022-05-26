@@ -31,6 +31,6 @@ func (cs *courierService) UpdateCourier(courier *domain.Courier) (*domain.Courie
 	return cs.repo.UpdateCourier(courier)
 }
 
-func (cs *courierService) DeleteCourier(id string) (*domain.Courier, error) {
+func (cs *courierService) DeleteCourier(id string) error {
 	return cs.repo.DeleteCourier(id)
 }

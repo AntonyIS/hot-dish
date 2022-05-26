@@ -7,7 +7,7 @@ type RestaurantService interface {
 	GetRestaurants() (*[]domain.Restaurant, error)
 	GetRestaurant(id string) (*domain.Restaurant, error)
 	UpdateRestaurant(r *domain.Restaurant) (*domain.Restaurant, error)
-	DeleteRestaurant(id string) (*domain.Restaurant, error)
+	DeleteRestaurant(id string) error
 }
 
 type CustomerService interface {
@@ -15,7 +15,7 @@ type CustomerService interface {
 	GetCustomers() (*[]domain.Customer, error)
 	GetCustomer(id string) (*domain.Customer, error)
 	UpdateCustomer(c *domain.Customer) (*domain.Customer, error)
-	DeleteCustomer(id string) (*domain.Customer, error)
+	DeleteCustomer(id string) error
 }
 
 type CourierService interface {
@@ -23,5 +23,5 @@ type CourierService interface {
 	GetCouriers() (*[]domain.Courier, error)
 	GetCourier(id string) (*domain.Courier, error)
 	UpdateCourier(r *domain.Courier) (*domain.Courier, error)
-	DeleteCourier(id string) (*domain.Courier, error)
+	DeleteCourier(id string) error
 }

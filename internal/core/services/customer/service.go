@@ -31,6 +31,6 @@ func (cs customerService) UpdateCustomer(customer *domain.Customer) (*domain.Cus
 	return cs.repo.UpdateCustomer(customer)
 }
 
-func (cs customerService) DeleteCustomer(id string) (*domain.Customer, error) {
+func (cs customerService) DeleteCustomer(id string) error {
 	return cs.repo.DeleteCustomer(id)
 }
