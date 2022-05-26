@@ -38,3 +38,5 @@ func (handler) CreateCourier(ctx gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, res)
 }
+
+func CourierService() {}

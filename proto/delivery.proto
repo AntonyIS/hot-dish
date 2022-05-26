@@ -1,0 +1,99 @@
+syntax="proto3";
+package proto;
+option go_package = "./";
+
+service CourierService {
+    rpc CreateCourier(CourierRequest) returns (CourierResponse) {}
+    rpc GetCourier(ItemID) returns (CourierResponse) {}
+	rpc GetCouriers(EmptyRequest) returns (CourierListResponse) {}
+    rpc UpdateCourier(CourierRequest) returns (CourierResponse) {}
+    rpc DeleteCourier(ItemID) returns (Message) {}
+}
+
+service CustomerService {
+    rpc CreateCustomer(CustomerRequest) returns (CustomerResponse) {}
+    rpc GetCustomer(ItemID) returns (CustomerResponse) {}
+	rpc GetCustomers(EmptyRequest) returns (CustomerListResponse) {}
+    rpc UpdateCustomer(CustomerRequest) returns (CustomerResponse) {}
+    rpc DeleteCustomer(ItemID) returns (Message) {}
+}
+
+service RestaurantService {
+    rpc CreateRestaurant(RestaurantRequest) returns (RestaurantResponse) {}
+    rpc GetRestaurant(ItemID) returns (RestaurantResponse) {}
+	rpc GetRestaurants(EmptyRequest) returns (RestaurantListResponse) {}
+    rpc UpdateRestaurant(RestaurantRequest) returns (RestaurantResponse) {}
+    rpc DeleteRestaurant(ItemID) returns (Message) {}
+}
+
+message CourierRequest {
+    string id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string email = 4;
+    string transport_mode = 5;
+}
+
+message CustomerRequest {
+    string id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string email = 4;
+    string payment_mode = 5;
+    string location = 6;
+}
+
+message RestaurantRequest {
+    string id = 1;
+    string name = 2;
+    string location = 3;
+    string phone = 4;
+    string image = 5;
+}
+
+message CourierResponse {
+    string id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string email = 4;
+    string transport_mode = 5;
+}
+
+message CustomerResponse {
+    string id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    string email = 4;
+    string payment_mode = 5;
+    string location = 6;
+}
+
+message RestaurantResponse {
+    string id = 1;
+    string name = 2;
+    string location = 3;
+    string phone = 4;
+    string image = 5;
+}
+
+message CourierListResponse {
+    repeated CourierResponse couriers = 1;
+}
+
+message CustomerListResponse {
+    repeated CustomerResponse customers = 1;
+}
+
+message RestaurantListResponse {
+    repeated RestaurantResponse restaurants = 1;
+}
+
+message ItemID{
+     string id = 1;
+}
+
+message Message {
+	string message = 1;
+}
+
+message EmptyRequest {}
