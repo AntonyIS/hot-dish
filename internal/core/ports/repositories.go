@@ -1,6 +1,6 @@
 package ports
 
-import "github.com/AntonyIS/go-foods/internal/core/domain"
+import "github.com/AntonyIS/hot-dish/internal/core/domain"
 
 type RestaurantRepository interface {
 	CreateRestaurant(restaurant *domain.Restaurant) (*domain.Restaurant, error)
